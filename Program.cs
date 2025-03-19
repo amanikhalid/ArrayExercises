@@ -8,7 +8,7 @@
             // Declaring an Array of 5 Int
             //int[] numbers = new int[5] {11, 12, 13, 14, 15};
 
-         
+
             //Console.WriteLine("Array Numbers: ");
             //for (int i = 0; i < numbers.Length; i++) 
             //{
@@ -17,7 +17,27 @@
 
             ////-----------------------------------------------
             ////2. Finding Maximum & Minimum in an Array
-            //Console.WriteLine("Enter 10 Numbers: ");
+            int[] numbers = new int[10];
+            Console.WriteLine("Enter 10 Numbers: ");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine($"Number  {i+1} :  ");
+                numbers[i]= int.Parse(Console.ReadLine());
+            }
+
+            int maximum = numbers[0];
+            int minimum = numbers[0];
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i] > maximum)
+                    maximum = numbers[i];
+
+                if (numbers[i] < minimum)
+                    minimum = numbers[i];
+            }
+            Console.WriteLine($"Maximum Value is {maximum}");
+            Console.WriteLine($"Minimum Value is {minimum}");
 
 
             //-----------------------------------------------
