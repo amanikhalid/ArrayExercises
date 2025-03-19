@@ -48,30 +48,66 @@
             Console.WriteLine($"Enter {N} numbers :");
             int EvenNumbersCount = 0, OddNumbersCount = 0;
             for (int i = 0; i<N; i++)
-                {
+            {
                 nums[i]= int.Parse(Console.ReadLine());
-                }
+            }
 
             for (int i = 0; i<N; i++)
+            {
+                if (nums[i] % 2==0)
                 {
-                    if (nums[i] % 2==0)
-                    {
-                        EvenNumbersCount =EvenNumbersCount + 1;
-                    }
-                    
-
-                    else
-                    {
-                        OddNumbersCount=OddNumbersCount +1;
-                    }
-                       
-
+                    EvenNumbersCount =EvenNumbersCount + 1;
                 }
-                Console.WriteLine($"total Even numbers is {EvenNumbersCount}");
-                Console.WriteLine($"total Odd numbers is {OddNumbersCount}");
+
+
+                else
+                {
+                    OddNumbersCount=OddNumbersCount +1;
+                }
+
+
             }
-            
-        
+            Console.WriteLine($"total Even numbers is {EvenNumbersCount}");
+            Console.WriteLine($"total Odd numbers is {OddNumbersCount}");
+
+            //----------------------------------------
+            //4. Reverse an Array
+            Console.WriteLine(" Enter a Number of Elements");
+            int e = int.Parse(Console.ReadLine());
+            int[] numrs = new int[e];
+            Console.WriteLine($"Enter {e} numbers");
+
+            for (int i = 0; i<e; i++)
+            {
+                Console.WriteLine($"Number {i+1}");
+                numrs[i]=int.Parse(Console.ReadLine());
+            }
+            Array.Reverse(numrs);
+            Console.WriteLine("Reversed Array : ");
+
+            foreach (int number in numrs)
+            {
+                Console.WriteLine(number + " , ");
+            }
+            //-----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
+
+
     }
+}   
 
